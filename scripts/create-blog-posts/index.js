@@ -2,24 +2,41 @@ const fs = require('fs')
 const path = require('path')
 const fm = require('front-matter')
 
-const blogsPath = path.join(__dirname, "../../", 'blogs');
-const dir = fs.opendirSync(blogsPath);
+const blogsMdPath = path.join(__dirname, "../../", 'blogs');
+const blogsLivePath = path.join(__dirname, "../../", "src", "blog")
 
-fs.readdir(blogsPath, (err, files) => {
+// Empty the live blogs folder
+fs.readdir(blogsLivePath, (err, files) => {
 	if (err) {
 		console.log(err)
 	}
 	files.forEach(file => {
-		fs.readFile(path.join(blogsPath, file), "utf-8", (err, data) => {
+		console.log(file)
+		fs.rmSync(path.join(blogsLivePath, file), { recursive: true }, err => {
+			if (err) {
+				console.log(err)
+			}
+		})
+	})
+})
+
+fs.readdir(blogsMdPath, (err, files) => {
+	if (err) {
+		console.log(err)
+	}
+	files.forEach(file => {
+		fs.readFile(path.join(blogsMdPath, file), "utf-8", (err, data) => {
 			if (err) {
 				console.log(err)
 			}
 			const frontMatter = fm(data);
-			fs.mkdirSync(`src/blog/${frontMatter.attributes.path}`)
-			fs.writeFile(`src/blog/${frontMatter.attributes.path}/index.html`, JSON.stringify(frontMatter), (err) => {
-				if (err) throw err;
-				console.log("Saved")
-			})
+			if (!fs.existsSync(`src/blog/${frontMatter.attributes.path}`)) {
+				fs.mkdirSync(`src/blog/${frontMatter.attributes.path}`)
+				fs.writeFile(`src/blog/${frontMatter.attributes.path}/index.html`, JSON.stringify(frontMatter), (err) => {
+					if (err) throw err;
+					console.log("Saved")
+				})
+			}
 		})
 	})
 })

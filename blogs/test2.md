@@ -1,5 +1,5 @@
 ---
-title: The secondtest
+title: The second test
 path: the-second-test
 ---
 
