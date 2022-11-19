@@ -10,9 +10,9 @@ jobs:
         with:
           node-version: '14'
       - run: |
-        date > generated.txt
-        git config user.name bloycey
-        git config user.email bloyce1990@gmail.com
-        git add .
-        git commit -m "generated"
-        git push
+          date > generated.txt
+          git config user.name bloycey
+          git config user.email bloyce1990@gmail.com
+          git add .
+          git commit -m "generated"
+          git push
