@@ -5,4 +5,4 @@ path: bloycey-test
 
 # What is up with this
 
-I don't really know what I'm doing!
+Changing the blog content on the third blog
