@@ -3,7 +3,7 @@ const path = require('path')
 const fm = require('front-matter')
 
 const blogsMdPath = path.join(__dirname, "../../", 'blogs');
-const blogsLivePath = path.join(__dirname, "../../src", "blog")
+const blogsLivePath = path.join(__dirname, "../../", "src/", "blog")
 
 // Empty the live blogs folder
 fs.readdir(blogsLivePath, (err, files) => {
