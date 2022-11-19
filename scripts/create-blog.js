@@ -4,7 +4,7 @@ console.log("hello world")
 const currentDate = new Date();
 console.log(currentDate)
 
-fs.writeFile('example.txt', currentDate, (err) => {
+fs.writeFile('example.txt', currentDate.toString(), (err) => {
 	if (err) throw err;
 	console.log("Saved")
 })
