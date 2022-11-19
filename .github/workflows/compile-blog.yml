@@ -10,6 +10,9 @@ jobs:
         with:
           node-version: '14'
       - run: |
+          cd scripts/create-blog-posts
+          npm install
+      - run: |
           node scripts/create-blog-posts/index.js
           git config user.name bloycey
           git config user.email bloyce1990@gmail.com
