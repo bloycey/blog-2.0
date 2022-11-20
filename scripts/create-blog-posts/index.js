@@ -53,8 +53,6 @@ const createBlogPages = async () => {
 						date: frontMatter.attributes.date,
 					}
 
-					console.log("blogTemplate", blogTemplate)
-
 					const blogContent = Mustache.render(blogTemplate, blogContentVariables)
 
 					fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
