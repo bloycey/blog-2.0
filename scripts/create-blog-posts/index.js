@@ -42,8 +42,8 @@ const createBlogPages = async () => {
 				const frontMatter = fm(data);
 				const contentFromMdToHTML = md.render(frontMatter.body);
 
-				fs.mkdirSync(`../../src/blog/${frontMatter.attributes.path}`, { recursive: true })
-				fs.writeFile(`../../src/blog/${frontMatter.attributes.path}/index.html`, contentFromMdToHTML, (err) => {
+				fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
+				fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), contentFromMdToHTML, (err) => {
 					if (err) throw err;
 					console.log("Saved")
 				})
