@@ -5,7 +5,7 @@ const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
 
 const blogsMdPath = path.join(__dirname, "../../", 'blogs');
-const blogsLivePath = path.join(__dirname, "../../", "src/", "blog")
+const blogsLivePath = path.join(__dirname, "../../", "src", "blog")
 
 // Empty the live blogs folder
 
