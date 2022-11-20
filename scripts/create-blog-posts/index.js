@@ -5,9 +5,6 @@ const fm = require('front-matter')
 const blogsMdPath = path.join(__dirname, "../../", 'blogs');
 const blogsLivePath = path.join(__dirname, "../../", "src/", "blog")
 
-// console.log(blogsMdPath)
-// console.log(blogsLivePath)
-
 // Empty the live blogs folder
 fs.readdir(blogsLivePath, (err, files) => {
 	if (err) {
@@ -44,13 +41,3 @@ fs.readdir(blogsMdPath, (err, files) => {
 		})
 	})
 })
-
-// Need to delete everything from src except the index.html
-
-
-// const currentDate = new Date();
-
-// fs.writeFile('example.txt', currentDate.toString(), (err) => {
-// 	if (err) throw err;
-// 	console.log("Saved")
-// })
