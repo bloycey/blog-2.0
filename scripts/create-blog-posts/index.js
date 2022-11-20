@@ -14,15 +14,16 @@ const deleteExistingBlogs = async () => {
 		if (err) {
 			console.log(err)
 		}
-		console.log(files)
-		files.forEach(file => {
-			console.log(file)
-			fs.rmSync(path.join(blogsLivePath, file), { recursive: true }, err => {
-				if (err) {
-					console.log(err)
-				}
+		if (files) {
+			files.forEach(file => {
+				console.log(file)
+				fs.rmSync(path.join(blogsLivePath, file), { recursive: true }, err => {
+					if (err) {
+						console.log(err)
+					}
+				})
 			})
-		})
+		}
 	})
 	return Promise.resolve()
 }
