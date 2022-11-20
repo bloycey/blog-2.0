@@ -1,13 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 const fm = require('front-matter')
+const Mustache = require('mustache');
 const MarkdownIt = require('markdown-it')
-const md = new MarkdownIt()
+const md = new MarkdownIt('commonmark')
 
 const blogsMdPath = path.join(__dirname, "../../", 'blogs');
 const blogsLivePath = path.join(__dirname, "../../", "src", "blog")
-
-// Empty the live blogs folder
+const blogTemplatePath = path.join(__dirname, "../../", "src", "partials", "blog.mustache")
 
 const deleteExistingBlogs = async () => {
 	fs.readdir(blogsLivePath, (err, files) => {
@@ -29,24 +29,39 @@ const deleteExistingBlogs = async () => {
 }
 
 const createBlogPages = async () => {
-	fs.readdir(blogsMdPath, (err, files) => {
-		console.log("blogs path", files)
+	fs.readFile(blogTemplatePath, "utf-8", (err, data) => {
 		if (err) {
 			console.log(err)
 		}
-		files.forEach(file => {
-			fs.readFile(path.join(blogsMdPath, file), "utf-8", (err, data) => {
-				if (err) {
-					console.log(err)
-				}
-				console.log("data", data)
-				const frontMatter = fm(data);
-				const contentFromMdToHTML = md.render(frontMatter.body);
+		const blogTemplate = data;
 
-				fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
-				fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), contentFromMdToHTML, (err) => {
-					if (err) throw err;
-					console.log("Saved")
+		fs.readdir(blogsMdPath, (err, files) => {
+			console.log("blogs path", files)
+			if (err) {
+				console.log(err)
+			}
+			files.forEach(file => {
+				fs.readFile(path.join(blogsMdPath, file), "utf-8", (err, data) => {
+					if (err) {
+						console.log(err)
+					}
+					const frontMatter = fm(data);
+					const contentFromMdToHTML = md.render(frontMatter.body);
+					const blogContentVariables = {
+						content: contentFromMdToHTML,
+						title: frontMatter.attributes.title,
+						date: frontMatter.attributes.date,
+					}
+
+					console.log("blogTemplate", blogTemplate)
+
+					const blogContent = Mustache.render(blogTemplate, blogContentVariables)
+
+					fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
+					fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), blogContent, (err) => {
+						if (err) throw err;
+						console.log("Saved")
+					})
 				})
 			})
 		})
