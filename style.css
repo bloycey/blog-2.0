@@ -9,6 +9,53 @@ a {
 	color: var(--red);
 }
 
+.blog a {
+	display: inline;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	margin: 0 0px;
+	transition: margin 0.25s;
+	background-color: transparent;
+}
+
+.blog a svg {
+	width: 140%;
+	position: absolute;
+	left: 50%;
+	bottom: -30px;
+	transform: translate(-50%, -10px) translateZ(0);
+	fill: none;
+	stroke: var(--red);
+	stroke-linecap: round;
+	stroke-width: 2px;
+	stroke-dasharray: 69px 278px;
+	stroke-dashoffset: 361px;
+	transition: stroke 0.25s ease 0s, stroke-dasharray 0.2s;
+}
+
+.blog a:hover svg {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -55%) translateZ(0);
+	stroke-dasharray: 180px 278px;
+	transition: stroke 0.25s ease 0.1s, stroke-dasharray 0.2s;
+}
+
+@media (max-width: 767px) {
+	.blog a {
+		text-decoration: underline;
+		color: var(--red);
+	}
+
+	.blog a svg {
+		display: none;
+	}
+	.blog a:hover {
+		margin: 0;
+	}
+}
+
 html {
 	background-image: url("assets/images/grid-bg.png");
 	font-size: 18px;
@@ -52,12 +99,13 @@ pre code {
 
 blockquote {
 	display: flex;
-	margin-bottom: 2rem;
+	margin: 1rem 0 3rem;
 	margin-left: 0;
 	position: relative;
 	line-height: var(--line-height);
 	font-weight: 600;
 	font-style: italic;
+	font-size: 1.25rem;
 }
 
 blockquote::before {
@@ -204,10 +252,19 @@ body::-webkit-scrollbar-thumb {
 	margin-bottom: 3rem;
 }
 
+.blog blockquote p {
+	margin-bottom: 0;
+}
+
 .blog h1 {
 	margin-top: 4rem;
 	margin-bottom: 0.5rem;
 	font-size: 2rem;
+}
+
+.blog h2 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 
 .blog p {

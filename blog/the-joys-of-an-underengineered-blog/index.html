@@ -1,0 +1,44 @@
+<html lang="en"><head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="Hot takes on web Tech">
+		<title>Bloycey Blog: The joys of an under-engineered blog</title>
+		<link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+		<link rel="alternate icon" href="../../favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,600&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../style.css">
+	</head>
+	<body>
+		<nav class="main-nav">
+			<a href="/" class="mono">bloycey.blog</a>
+		</nav>
+		<main>
+			<article class="blog">
+				<div class="magic-grid">
+					<h1>The joys of an under-engineered blog</h1>
+					<img src="../../assets/images/underline.svg" alt="Scribble underline">
+					<span class="blog-date mono">Tue Nov 22 2022</span>
+				</div>
+				<div class="magic-grid">
+					<p>If you're a developer and you want to start blogging you probably shouldn't build your own blog. Because if you build your own blog the chances are that you'll get caught up worrying about the performance of the blog, the developer aesthetics, where the data is stored, workflow automations...</p>
+<blockquote>
+<p>Basically everything except the actual writing.</p>
+</blockquote>
+<p>And that's an issue.</p>
+<p>Initially the stack for this blog was a Gatsby front-end with the content coming from Sanity CMS. Now both of these pieces of tech were pretty impressive circa 2019 (and still are), but did I really need to be using graphql, managing state, and componetising all the things. Absolutely not.</p>
+<p>A better choice might have been a static site generator like <a href="https://www.11ty.dev/">Eleventy<svg viewBox="0 0 70 36"><path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path></svg></a>, but even better is not to use anything at all. That's right, raw HTML, CSS, and JS baby! Well... almost.</p>
+<h2>The new stack</h2>
+<p>Bloycey.blog 2.0 is essentially an extremely minimal hacked together static site generator built on the fly with a github action. And the developer experience is blissful.</p>
+
+				</div>
+			</article>
+		</main>
+	
+
+</body></html>

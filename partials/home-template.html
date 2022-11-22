@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
 		<meta name="description" content="Hot takes on web Tech" />
-		<title>Bloycey Blog: The second test</title>
+		<title>Bloycey Blog</title>
 		<link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
-		<link rel="alternate icon" href="../../favicon.ico" />
+		<link rel="alternate icon" href="/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,25 +17,22 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,600&family=Space+Mono:wght@700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<nav class="main-nav">
 			<a href="/" class="mono">bloycey.blog</a>
 		</nav>
 		<main>
-			<article class="blog">
-				<div class="magic-grid">
-					<h1>The second test</h1>
-					<img src="../../assets/images/underline.svg" alt="Scribble underline" />
-					<span class="blog-date mono">21-11-2022</span>
-				</div>
-				<div class="magic-grid">
-					<h1>What is up with this</h1>
-<p>I don't really know what I'm doing!</p>
-
-				</div>
-			</article>
+			<div class="container">
+				<section class="hero-wrapper">
+					<h1>Hot takes on web tech</h1>
+					<img src="assets/images/andrew.svg" alt="Andrew" />
+				</section>
+			</div>
+			<ul>
+				{{links}}
+			</ul>
 		</main>
 	</body>
 </html>
