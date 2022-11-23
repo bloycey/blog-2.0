@@ -7,7 +7,7 @@ const Mustache = require('mustache');
 const MarkdownIt = require('markdown-it');
 const md = new MarkdownIt('commonmark');
 
-const blogsMdPath = path.join(__dirname, "../../", 'blogs');
+const blogsMdPath = path.join(__dirname, "../../", 'write-a-blog');
 const blogsLivePath = path.join(__dirname, "../../", "blog")
 const blogTemplatePath = path.join(__dirname, "../../", "partials", "blog.mustache")
 const homeTemplatePath = path.join(__dirname, "../../", "partials", "home-template.html")

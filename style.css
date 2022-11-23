@@ -286,3 +286,68 @@ body::-webkit-scrollbar-thumb {
 	margin-bottom: 1rem;
 	color: var(--red);
 }
+
+.blogs-list ul {
+	padding: 0;
+	margin-top: 2rem;
+	margin-bottom: 6rem;
+}
+
+.blogs-list li {
+	list-style: none;
+	margin-bottom: 3rem;
+}
+
+.blogs-list a {
+	text-decoration: none;
+	color: var(--black);
+	position: relative;
+	display: block;
+}
+
+.blogs-list img {
+	position: absolute;
+	left: -3rem;
+	top: 1.25rem;
+}
+.blogs-list img.red {
+	display: none;
+}
+
+.blogs-list span {
+	color: var(--red);
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+.blogs-list h2 {
+	font-size: 2rem;
+}
+
+.blogs-list a:hover img.black {
+	display: none;
+}
+
+.blogs-list a:hover img.red {
+	display: inline;
+}
+
+.blogs-list a:hover h2 {
+	color: var(--red);
+}
+
+.blogs-list a:hover span {
+	color: var(--black);
+}
+
+@media (max-width: 767px) {
+	.blogs-list a h2 {
+		font-size: 1.5rem;
+	}
+	.blogs-list a img {
+		display: none;
+	}
+	.blogs-list a:hover img {
+		display: none !important;
+	}
+}
