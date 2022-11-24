@@ -18,7 +18,6 @@ const deleteExistingBlogs = async () => {
 	fs.readdir(blogsLivePath, (err, files) => {
 		if (files) {
 			files.forEach(file => {
-				console.log(file)
 				fs.rmSync(path.join(blogsLivePath, file), { recursive: true }, err => {
 					if (err) {
 						console.log(err)
@@ -57,8 +56,6 @@ const createBlogPages = async () => {
 					})
 
 					const finalBlogContentAsString = parsedBlog.documentElement.outerHTML;
-					console.log("final blog", finalBlogContentAsString)
-
 					fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
 					fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), finalBlogContentAsString, (err) => {
 						console.log("Saved")
@@ -96,24 +93,10 @@ const createHomePageLinks = async () => {
 	})
 }
 
-// const createHomePage = async (links) => {
-// 	console.log("links", links)
-// 	fs.readFile(homeTemplatePath, "utf-8", (err, data) => {
-// 		const homeTemplate = data;
-// 		const variables = {
-// 			links
-// 		}
-// 		const homePageContent = Mustache.render(homeTemplate, variables);
-// 		fs.writeFile(path.join(homeLivePath, 'index.html'), homePageContent, (err) => { console.log(err) })
-// 	})
-// }
-
 const doTheMagic = async () => {
 	await deleteExistingBlogs().catch(err => { console.log(err) })
 	await createBlogPages().catch(err => { console.log(err) })
 	await createHomePageLinks().catch(err => { console.log(err) })
-	// console.log("links in main", links)
-	// createHomePage(links).catch(err => { console.log(err) })
 }
 
 doTheMagic();
