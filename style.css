@@ -61,6 +61,13 @@ html {
 	font-size: 18px;
 	font-family: "IBM Plex Sans", sans-serif;
 	color: var(--black);
+	background-size: 110px;
+}
+
+@media (min-width: 767px) {
+	html {
+		background-size: auto;
+	}
 }
 
 body {
@@ -108,10 +115,12 @@ blockquote {
 	font-size: 1.25rem;
 }
 
-blockquote::before {
-	content: url("assets/images/scribble_red.svg");
-	position: absolute;
-	left: -3.5rem;
+@media (min-width: 767px) {
+	blockquote::before {
+		content: url("assets/images/scribble_red.svg");
+		position: absolute;
+		left: -3.5rem;
+	}
 }
 
 .mono {
@@ -213,7 +222,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero-wrapper h1 {
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 	width: 100%;
 	line-height: 110%;
 	padding: 2rem 0;
@@ -230,7 +239,7 @@ body::-webkit-scrollbar-thumb {
 		display: block;
 	}
 	.hero-wrapper h1 {
-		font-size: 4rem;
+		font-size: 3.5rem;
 		width: 70%;
 	}
 }
@@ -249,7 +258,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .blog {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
 
 .blog blockquote p {
@@ -287,6 +296,11 @@ body::-webkit-scrollbar-thumb {
 	color: var(--red);
 }
 
+.blogs-list {
+	padding-left: 0;
+	padding-bottom: 4rem;
+}
+
 .blogs-list ul {
 	padding: 0;
 	margin-top: 2rem;
@@ -295,7 +309,7 @@ body::-webkit-scrollbar-thumb {
 
 .blogs-list li {
 	list-style: none;
-	margin-bottom: 3rem;
+	margin-bottom: 2.5rem;
 }
 
 .blogs-list a {
@@ -321,7 +335,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .blogs-list h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .blogs-list a:hover img.black {
