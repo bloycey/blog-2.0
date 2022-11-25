@@ -9,6 +9,6 @@ It's side project demo day and that means that it is beer time.
 
 ![davidmitchell](https://user-images.githubusercontent.com/20733264/203899017-6a46186c-79a0-4d29-8b14-628488e97792.png)
 
-Because as a wise man once said ([source]([source](https://thatmitchellandwebb.fandom.com/wiki/Refreshing_Beer)) ...
+Because as a wise man once said ([source]([source](https://thatmitchellandwebb.fandom.com/wiki/Refreshing_Beer))) ...
 
 > What could be better on a lovey day than a nice tall glass of cool refreshing alcoholic lager beer?
