@@ -11,10 +11,10 @@ If you're a developer and you want to start blogging you probably shouldn't buil
 
 And that's an issue.
 
-Initially the stack for this blog was a Gatsby front-end with the content coming from Sanity CMS. Now both of these pieces of tech were pretty impressive circa 2019 (and still are), but did I really need to be using graphql, managing state, and componetising all the things. Absolutely not.
+Initially the stack for this blog was a Gatsby front-end with the content coming from Sanity CMS. Now both of these pieces of tech were pretty impressive circa 2019 (and still are), but did I really need to be using graphql, managing state, and componetising all the things? Absolutely not.
 
 A better choice might have been a static site generator like [Eleventy](https://www.11ty.dev/), but even better is not to use anything at all. That's right, raw HTML, CSS, and JS baby! Well... almost.
 
 ## The new stack
 
-Bloycey.blog 2.0 is essentially an extremely minimal hacked together static site generator built on the fly with a github action. And the developer experience is blissful.
+Bloycey.blog 2.0 is essentially an extremely minimal hacked together static site generator built on the fly using a node script and a netlify build command. And the developer experience is blissful 😌.
