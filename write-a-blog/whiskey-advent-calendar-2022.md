@@ -24,3 +24,9 @@ I was at a board games night so I couldn't take the time to do a full tasting. T
 > Young, rough, and no real character. 36/100
 
 ---
+
+## Day 3 - Linkwood 11yr Old
+
+Pours very pale, similar colour to Ardbeg 10 - One of the palest whiskeys I've seen. Smells very floral: like honey and nectar. Smells a little sweet too, very appealing, with notes of peach and apricot. On sipping it really coats the mouth, it tastes like it smells - quite light, slightly sweet, and reminds me of poached pear. Has a long and gentle finish with a pleasant warmth. Not exactly my style but I can appreciate this whiskey for what it is.
+
+> Light, floral, and fruity. 70/100.
