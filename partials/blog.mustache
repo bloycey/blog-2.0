@@ -35,5 +35,34 @@
 				</div>
 			</article>
 		</main>
+		<footer>
+			<section class="subscribe-wrapper">
+				<div class="container text-center">
+					<div class="subscribe-header">
+						<div class="main-title">
+							<h3>There's more where that came from...</h3>
+							<p class="subscribe-subtitle text-sm">
+								Subscribe for nerdy stuff in your inbox
+							</p>
+						</div>
+						<p class="subscribed-msg">🎉 You've been subscribed!</p>
+					</div>
+					<form id="subscribe-form" name="subscribe" data-netlify="true">
+						<fieldset type="text">
+							<label for="name-field">Name:</label>
+							<input type="text" name="name" required="true" id="name-field" placeholder="Colonel Mustard" />
+						</fieldset>
+						<fieldset type="text">
+							<label for="email-field">Email:</label>
+							<input type="email" name="email" id="email-field" required="true" placeholder="thecolonel@mustard.com" />
+						</fieldset>
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+			</section>
+			<p id="response-text"></p>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+		<script src="../../assets/js/index.js"></script>
 	</body>
 </html>
