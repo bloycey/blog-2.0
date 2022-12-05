@@ -30,3 +30,20 @@ I was at a board games night so I couldn't take the time to do a full tasting. T
 Pours very pale, similar colour to Ardbeg 10 - One of the palest whiskeys I've seen. Smells very floral: like honey and nectar. Smells a little sweet too, very appealing, with notes of peach and apricot. On sipping it really coats the mouth, it tastes like it smells - quite light, slightly sweet, and reminds me of poached pear. Has a long and gentle finish with a pleasant warmth. Not exactly my style but I can appreciate this whiskey for what it is.
 
 > Light, floral, and fruity. 70/100.
+
+---
+
+## Day 4 - Highland #2 22yr Old
+
+This one is a mystery whiskey, presumably somewhere from the highland region. It smells old, like opening an old book or entering a dusty basement. It smells dry and woody. On tasting it is surprisingly soft and opens up into a very rich and quite luxurious mouthfeel. There's a hint of caramel but I wouldn't necessarily call this one sweet. Finishes smoothly and overall is a well-rounded whiskey. 
+
+> Beautifully rich mouthfeel and very well rounded. 75/100
+
+---
+
+## Day 5 - Tobermory 12yr Old
+
+The 54.7% alcohol content on this one is evident when getting a whif. Despite that I can detect something phenolic - a slight banana-like aroma. The taste is largely overpowered by the ABV. I found it difficult to drink and honestly struggled to find any redeeming qualities. The lingering flavour isn't terrible. 
+
+> Dominated by the ABV, rough throughout. 18/100
+
