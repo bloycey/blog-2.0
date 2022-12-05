@@ -23,6 +23,7 @@
 				<div class="magic-grid">
 					<h1>The joys of an under-engineered blog</h1>
 					<img src="../../assets/images/underline.svg" alt="Scribble underline">
+					<hr>
 					<span class="blog-date mono">Tue Nov 22 2022</span>
 				</div>
 				<div class="magic-grid">
@@ -31,14 +32,43 @@
 <p>Basically everything except the actual writing.</p>
 </blockquote>
 <p>And that's an issue.</p>
-<p>Initially the stack for this blog was a Gatsby front-end with the content coming from Sanity CMS. Now both of these pieces of tech were pretty impressive circa 2019 (and still are), but did I really need to be using graphql, managing state, and componetising all the things. Absolutely not.</p>
+<p>Initially the stack for this blog was a Gatsby front-end with the content coming from Sanity CMS. Now both of these pieces of tech were pretty impressive circa 2019 (and still are), but did I really need to be using graphql, managing state, and componetising all the things? Absolutely not.</p>
 <p>A better choice might have been a static site generator like <a href="https://www.11ty.dev/">Eleventy<svg viewBox="0 0 70 36"><path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527"></path></svg></a>, but even better is not to use anything at all. That's right, raw HTML, CSS, and JS baby! Well... almost.</p>
 <h2>The new stack</h2>
-<p>Bloycey.blog 2.0 is essentially an extremely minimal hacked together static site generator built on the fly with a github action. And the developer experience is blissful.</p>
+<p>Bloycey.blog 2.0 is essentially an extremely minimal hacked together static site generator built on the fly using a node script and a netlify build command. And the developer experience is blissful 😌.</p>
 
 				</div>
 			</article>
 		</main>
+		<footer>
+			<section class="subscribe-wrapper">
+				<div class="container text-center">
+					<div class="subscribe-header">
+						<div class="main-title">
+							<h3>There's more where that came from...</h3>
+							<p class="subscribe-subtitle text-sm">
+								Subscribe for nerdy stuff in your inbox
+							</p>
+						</div>
+						<p class="subscribed-msg">🎉 You've been subscribed!</p>
+					</div>
+					<form id="subscribe-form" name="subscribe" data-netlify="true">
+						<fieldset type="text">
+							<label for="name-field">Name:</label>
+							<input type="text" name="name" required="true" id="name-field" placeholder="Colonel Mustard">
+						</fieldset>
+						<fieldset type="text">
+							<label for="email-field">Email:</label>
+							<input type="email" name="email" id="email-field" required="true" placeholder="thecolonel@mustard.com">
+						</fieldset>
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+			</section>
+			<p id="response-text"></p>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+		<script src="../../assets/js/index.js"></script>
 	
 
 </body></html>

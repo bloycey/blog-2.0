@@ -14,6 +14,8 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@supabase/supabase-js": "^2.1.1",
+		"dotenv": "^16.0.3",
 		"front-matter": "^4.0.2",
 		"jsdom": "^20.0.3",
 		"markdown-it": "^13.0.1",
@@ -22,5 +24,8 @@
 	"bugs": {
 		"url": "https://github.com/bloycey/blog-2.0/issues"
 	},
-	"homepage": "https://github.com/bloycey/blog-2.0#readme"
+	"homepage": "https://github.com/bloycey/blog-2.0#readme",
+	"devDependencies": {
+		"node-fetch": "^3.3.0"
+	}
 }
