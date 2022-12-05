@@ -83,7 +83,7 @@ const createHomePageLinks = async () => {
 			}
 			const homeLinkTemplate = fs.readFileSync(homeLinkTemplatePath, "utf-8")
 			const homeLink = Mustache.render(homeLinkTemplate, blogContentVariables)
-			allLinks += homeLink;
+			allLinks = `${homeLink} ${allLinks}`
 		})
 		fs.readFile(homeTemplatePath, "utf-8", (err, data) => {
 			const homeTemplate = data;
