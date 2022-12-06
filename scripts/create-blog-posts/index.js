@@ -12,6 +12,7 @@ const blogsLivePath = path.join(__dirname, "../../", "blog")
 const blogTemplatePath = path.join(__dirname, "../../", "partials", "blog.mustache")
 const homeTemplatePath = path.join(__dirname, "../../", "partials", "home-template.html")
 const homeLinkTemplatePath = path.join(__dirname, "../../", "partials", "home_link.mustache")
+const footerTemplatePath = path.join(__dirname, "../../", "partials", "footer.html")
 const homeLivePath = path.join(__dirname, "../../")
 
 const deleteExistingBlogs = async () => {
@@ -56,9 +57,13 @@ const createBlogPages = async () => {
 					})
 
 					const finalBlogContentAsString = parsedBlog.documentElement.outerHTML;
-					fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
-					fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), finalBlogContentAsString, (err) => {
-						console.log("Saved")
+
+					fs.readFile(footerTemplatePath, "utf-8", (err, data) => {
+						const finalBlog = finalBlogContentAsString.replace("##footer##", data)
+						fs.mkdirSync(path.join(blogsLivePath, frontMatter.attributes.path), { recursive: true })
+						fs.writeFile(path.join(blogsLivePath, frontMatter.attributes.path, 'index.html'), finalBlog, (err) => {
+							console.log("Saved")
+						})
 					})
 				})
 			})
@@ -87,8 +92,11 @@ const createHomePageLinks = async () => {
 		})
 		fs.readFile(homeTemplatePath, "utf-8", (err, data) => {
 			const homeTemplate = data;
-			const newHomeTemplate = homeTemplate.replace("{{links}}", allLinks);
-			fs.writeFile(path.join(homeLivePath, 'index.html'), newHomeTemplate, (err) => { console.log(err) })
+			const homeTemplateWithLinks = homeTemplate.replace("##links##", allLinks);
+			fs.readFile(footerTemplatePath, "utf-8", (err, data) => {
+				const finalHomeTemplate = homeTemplateWithLinks.replace("##footer##", data)
+				fs.writeFile(path.join(homeLivePath, 'index.html'), finalHomeTemplate, (err) => { console.log(err) })
+			})
 		})
 	})
 }
