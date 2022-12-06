@@ -47,3 +47,10 @@ The 54.7% alcohol content on this one is evident when getting a whif. Despite th
 
 > Dominated by the ABV, rough throughout. 18/100
 
+---
+
+## Day 6 - Amorik 7yr Old
+
+Pours a very deep amber colour. Smells like brown sugar with a hint of acetone. Now this one I like! It's very full-bodied, coating the mouth but without any sort of alcohol burn. It feels thick - chewy even. To me it tastes a bit bready with some tannins on the finish, somewhat similar to a strong tea. There's surprising depth here for 7yrs old and a more trained palatte could probably pick up more notes. For me, however, it hits the sweet spot of drinkable and interesting. 
+
+> A full bodied and surprisingly complex whiskey with a slightly bitter finish. Very enjoyable. 78/100. 
